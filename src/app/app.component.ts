@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {ButtonComponent} from './components/button/button.component';
+import {RouterOutlet} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
+  standalone: true,
+  imports: [
+    ButtonComponent,
+    RouterOutlet
+  ],
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'mini-app';
 }
